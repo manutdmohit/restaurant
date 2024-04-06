@@ -1,4 +1,5 @@
-// components/GallerySection.js
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -19,17 +20,25 @@ const GallerySection = () => {
         {galleryImages.map((imageUrl, index) => (
           <div
             key={index}
-            className="relative h-64 overflow-hidden rounded-lg shadow-lg"
+            className="relative overflow-hidden rounded-lg shadow-lg aspect-square"
           >
             <Image
               src={imageUrl}
               alt={`Gallery Image ${index + 1}`}
               layout="fill"
               objectFit="cover"
-              className="transition duration-300 ease-in-out hover:scale-110"
+              className="transition duration-300 ease-in-out hover:scale-110 "
             />
           </div>
         ))}
+        <style jsx>{`
+          @media screen and (max-width: 625px) {
+            .aspect-square {
+              width: 90%;
+              margin: auto;
+            }
+          }
+        `}</style>
       </div>
     </div>
   );
