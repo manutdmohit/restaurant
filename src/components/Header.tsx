@@ -14,7 +14,7 @@ const Header = () => {
     <header className="bg-gray-900 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/" className="text-2xl font-bold ml-7">
             <span className="text-yellow-500">Gourmet</span> Delights
           </Link>
         </div>
@@ -78,7 +78,7 @@ const Header = () => {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <ul className="flex flex-col items-center space-y-4 mt-4">
+          <ul className="flex flex-col  space-y-4 mt-4 ml-7">
             <li>
               <Link
                 href="/"
